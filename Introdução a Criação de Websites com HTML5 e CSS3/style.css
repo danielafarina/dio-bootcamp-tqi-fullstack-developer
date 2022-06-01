@@ -1,0 +1,19 @@
+body {
+    background: rgb(236, 195, 230);  
+}
+
+#title, .subtitle, .post_title {
+    color: blueviolet;
+}
+
+.post_title {
+    font-size: 16px;
+    font-style: italic;
+}
+
+.post {
+    background: white;
+    padding: 10px;
+    border: 3px solid rgb(94, 5, 102);
+    margin: 10px;
+}
