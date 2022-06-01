@@ -30,3 +30,31 @@ border
 padding
 content
 
+vertical
+horizontal
+
+superior
+direito
+inferior
+esquerdo
+
+## Border
+
+Largura: pixels, cm, mm...
+Cor: blue, #0000ff
+Estilo: sólida, pontilhada, tracejada...
+
+.post {
+    border: 3px solid ##blue;
+    border-top: 2px dotted #green;
+    border-right: 4px dashed ##pink;
+}
+
+### Border Radius
+
+border-radius: 10px;
+border-radius: 50%;
+border-radius: 10% 20%;
+border-radius: 10% 20% 15% 22%
+
+### Atenção! Border Radius em 50% transforma o quadrado em círculo!
