@@ -25,10 +25,10 @@ Um id só pode ser usado uma vez na página.
 
 # Box model
 
-margin
-border
-padding
-content
+margin (margem)
+border (borda)
+padding (preenchimento)
+content (conteúdo)
 
 vertical
 horizontal
