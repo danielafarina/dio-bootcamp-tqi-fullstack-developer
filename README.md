@@ -8,3 +8,4 @@ Repositório com o conteúdo estudado até agora no Bootcamp TQI Fullstack Devel
 [Google Fonts](https://fonts.google.com/)
 [Tiny PNG](https://tinypng.com/)
 [Vecteezy](https://pt.vecteezy.com/)
+[W3C](https://www.w3c.br/Cursos/) ***EXCELENTE***
