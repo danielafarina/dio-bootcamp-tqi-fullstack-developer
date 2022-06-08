@@ -40,3 +40,28 @@ Para criar scripts dinâmicos que realizam a interação de apps ou páginas web
 # Objetos
 
 Dados que possuem **propriedades** e **valores** que definem suas características. Declarados entre chaves.
+
+# Funções
+
+## Declarativas
+
+São funções que possuem o uso mais comum, deve ser declarada usando a palavra reservada “function” seguida do nome da função, parênteses e chaves:
+
+function nomeDaFuncao() { ${instrucao}; }; 
+
+// o nome da função é obrigatório;
+
+## Expressões de Funções
+
+São funções atribuídas à expressões. A nomeação das funções por expressão é opcional:
+
+var funcao = function nomeDaFuncao() {  ${instrucao}; } };
+
+Ex. 2: var funcao = function() { ${instrucao}; };
+
+## Arrow Function
+
+São funções de expressão de sintaxe curta. Arrow functions sempre serão anônimas, e portanto não podem ser nomeadas.
+deve ser declarada com parênteses "()", seguido de "=>" e depois chaves "{}"
+
+var funcao = () => { ${instrucao}; };
