@@ -8,7 +8,7 @@ const SOMA = function (a, b) {
 }
 
 
-## Função Autoinvocável
+## Função Autoinvocável: não pode receber parâmetros!
 
 ### Exemplo 1:
 (
