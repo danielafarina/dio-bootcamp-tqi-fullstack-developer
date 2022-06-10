@@ -1,5 +1,5 @@
 function validaArray(arr, n) {
-    try {
+    try { // aqui são executadas instruções e caso ocorra algum erro durante o processo...
 
         if(!arr && !n) throw new ReferenceError("Envie os parâmetros");
 
@@ -12,7 +12,8 @@ function validaArray(arr, n) {
         return arr;
 
     }
-    catch(e) {
+    catch(e) { // aqui será tratado o erro
+        
         if(e instanceof ReferenceError) {
             console.log("este erro é um ReferenceError");
             console.log(e.message);
