@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    background-color: rgb(80, 215, 215);
+}
+
+.memory-game {
+    height: 640px;
+    width: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* pra quando os elementos não couberem mais na linha, eles caírem */
+    perspective: 1000px;
+}
+
+.card {
+    height: calc(25% - 10px);
+    width: calc(25% - 10px);
+    margin: 5px;
+    position: relative;
+    box-shadow: 1px 1px 1px rgba(1, 1, 1, .3);
+    cursor: pointer;
+    transform: scale(1);
+    transform-style: preserve-3d; /* não vai deixar o elemento achatado no plano */
+    transition: transform .9s; /* nosso "transition" irá animar nosso "transform"*/
+}
+
+.card:active { /* quando clica na carta */
+    transform: scale(0.8);
+    transition: transform .5s;
+}
+
+.card-front,
+.card-back {
+    width: 100%; /* a imagem ocupará cem por cento da nossa div */
+    height: 100%;
+    padding: 20px;
+    position: absolute; /* deixa uma imagem em cima da outra */
+    border-radius: 5px;
+    background: white;
+    backface-visibility: hidden; /* uma propriedade que retira o verso do elemento */
+}
+
+.card-front {
+    transform: rotateY(180deg);
+}
+
+/* FLIP CARD ANIMATION */
+
+.card.flip {
+    transform: rotateY(180deg);
+}
