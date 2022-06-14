@@ -62,3 +62,5 @@ cards.forEach((card) => {
     card.addEventListener('click', flipCard);
 })
 
+// arrow function: quando precisamos de rapidez para escrever o código, quando não precisamos dar nome à função, quando precisamos passar uma função como parâmetro de outra função.
+
