@@ -43,9 +43,13 @@ function bestRockSong(response) {
 
     // Usando async/await: veio resolver esse aninhamento de .then(), ficando mais legível.
     async function doTheJob() {
-        const bestRockBandresponse = await bestRockBand('Kiss');
-        console.log(bestRockBandresponse);
-        const bestRockSongresponse = await bestRockSong(bestRockBandresponse);
-        console.log(bestRockSongresponse);
+        try {
+            const bestRockBandresponse = await bestRockBand('Queen');
+            console.log(bestRockBandresponse);
+            const bestRockSongresponse = await bestRockSong(bestRockBandresponse);
+            console.log(bestRockSongresponse);
+        } catch (err) {
+            console.log(err.msg);
+        }        
     }
     doTheJob();
