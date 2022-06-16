@@ -28,8 +28,8 @@ function bestRockSong(response) {
 }
 
 // Usando .then()
-// bestRockBand('Queen')
-//     .then(response => {
+// bestRockBand('Nirvana') // segue o aninhamento de chamadas:
+//     .then(response => { // só faz se a promise for resolvida.
 //         console.log('Checking the answer');
 //         return bestRockSong(response)
 //     })
@@ -37,18 +37,18 @@ function bestRockSong(response) {
 //         console.log('Findind the best song...');
 //         console.log(response);
 //     })
-//     .catch(err => {
+//     .catch(err => { // só faz se a promise for rejeitada.
 //         console.log(err.msg);
 //     })
 
-    // Usando async/await: veio resolver esse aninhamento de .then(), ficando mais legível.
+    // Usando async/await: veio resolver esse aninhamento infinito de .then(), ficando mais legível.
     async function doTheJob() {
         try {
-            const bestRockBandresponse = await bestRockBand('Queen');
+            const bestRockBandresponse = await bestRockBand('Nirvana');
             console.log(bestRockBandresponse);
             const bestRockSongresponse = await bestRockSong(bestRockBandresponse);
             console.log(bestRockSongresponse);
-        } catch (err) {
+        } catch (err) { // tratamento de erro com try/catch
             console.log(err.msg);
         }        
     }
