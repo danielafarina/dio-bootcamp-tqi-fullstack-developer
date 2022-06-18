@@ -67,3 +67,24 @@ Single page application. O normal seria eu ter várias páginas html (assim como
 
 React "pensa" em como a interface deve estar a cada momento (comparando a DOM real com a virtual e vendo apenas o que mudou) ao invés de alterá-la com o tempo, o que faz ter ganho de performance e evita uma série de erros.
 
+
+# Estado e Ciclo de Vida
+
+## Inicialização
+
+props e state
+
+## Montagem
+
+componentWillMount -> render -> componentDidMount
+
+## Atualização
+
+toda vez que uma propriedade ou um estado são alterados, ele vai renderizar a página de novo.
+
+## Desmontagem
+
+componentWillUnmount
+
+Nenhum componente pai ou filho deve saber se outro componente possui estado ou não. O estado é apenas local ao componente e caso seja necessário enviar algum atributo para outro então é feito via props.
+
