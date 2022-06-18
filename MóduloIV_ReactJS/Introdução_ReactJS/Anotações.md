@@ -17,3 +17,53 @@ React é declarativa. Não se preocupa se uma condição está sendo satisfeita 
 É baseada em componentes.
 
 Nubank, Netflix, Instagram, Facebook, iFood, etc.
+
+# JSX
+
+*const element = <\h1>Hello, world!</\h1>;*
+
+Nem HTML, nem string!  Foi criado para poder criar elementos html com o poder do JS dentro dele.
+
+É uma sintax sugar para React.createElement
+
+Você pode usar aspas para especificar strings literais como atributos:
+
+*const element = <\a href="https://www.reactjs.org"> link </\a>;*
+
+Você também pode usar chaves para incorporar uma expressão JavaScript em um atributo:
+
+*const element = <\img src={user.avatarUrl}></\img>;*
+
+Não envolva chaves com aspas quando estiver incorporando uma expressão JavaScript em um atributo. Você deveria ou usar aspas (para valores em string) ou chaves (para expressões), mas não ambos no mesmo atributo.
+
+### Atenção: ###
+
+Como JSX é mais próximo de JavaScript que do HTML, o React DOM usa **camelCase** como convenção para nomes de propriedades ao invés dos nomes de atributos do HTML.
+
+Por exemplo, *class* se transforma em *className* em JSX, e *tabindex* se transforma em *tabIndex*.
+
+O Babel (um transpilador que) compila JSX para chamadas React.createElement(), porque o browser/aplicação não interpreta JSX.
+
+Estes dois exemplos são idênticos:
+
+*const element = (*
+  *<\h1 className="greeting">*
+    *Hello, world!*
+  *</\h1>*
+*);*
+
+*const element = React.createElement(*
+  *'h1',*
+  *{className: 'greeting'},*
+  *'Hello, world!'*
+*);*
+
+
+# SPA
+
+Single page application. O normal seria eu ter várias páginas html (assim como eu havia pensado que funcionava antes). Mas com o React, não precisa. Com uma página só eu consigo mudar alguns componentes da minha index única e original.
+
+# DOM Virtual
+
+React "pensa" em como a interface deve estar a cada momento (comparando a DOM real com a virtual e vendo apenas o que mudou) ao invés de alterá-la com o tempo, o que faz ter ganho de performance e evita uma série de erros.
+
