@@ -1,1 +1,6 @@
-// parei em 15 min da segunda aula da parte2
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+const bodyElement = ReactDOM.createRoot(document.getElementById('app'));
+bodyElement.render(<App />, document.getElementById("app"));
+
