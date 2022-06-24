@@ -1,0 +1,15 @@
+<!-- The "source" code is the code that we'll write and edit. The "distribution" code is the minimized and optimized output of our build process that will eventually be loaded in the browser.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getting started</title>
+    <!-- <script src="https://unpkg.com/lodash@4.17.20"></script>  -->
+    <!-- In this example, there are implicit dependencies between the <script> tags. Our index.js file depends on lodash being included in the page before it runs. This is because index.js never explicitly declared a need for lodash; it assumes that the global variable _ exists. -->
+</head>
+<body>
+    <!-- Now, since we'll be bundling our scripts, we have to update our index.html file. Let's remove the lodash <script>, as we now import it, and modify the other <script> tag to load the bundle, instead of the raw ./src file: -->
+    <!-- <script src="./src/index.js"></script>     -->
+    <script src="main.js"></script>
+</body>
+</html>

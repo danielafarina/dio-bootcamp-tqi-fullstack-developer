@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-const bodyElement = ReactDOM.createRoot(document.getElementById('app'));
-bodyElement.render(<App />, document.getElementById("app"));
 
+const application = ReactDOM.createRoot(document.getElementById('app'));
+application.render(<App />, application);

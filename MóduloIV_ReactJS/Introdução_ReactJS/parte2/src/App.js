@@ -1,9 +1,14 @@
 import React from "react";
+import Button from './Button';
+
 const App = () => {
     return (
         <div>
-            <p>Digital Inovation One</p>
-            <p>Bem vindo a nossa aula</p>
+            <p>DIO</p>
+            <p>Bem vindo!</p>
+            <p>Webpack</p>
+            <p>oi</p>
+            <Button />
         </div>
     );
 };
