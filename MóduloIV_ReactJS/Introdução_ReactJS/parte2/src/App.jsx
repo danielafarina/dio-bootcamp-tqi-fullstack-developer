@@ -1,5 +1,8 @@
 import React from "react";
-// import Button from './Button';
+import mock from './mock';
+import Button from './components/Button';
+
+// import Button from './Buttonn';
 
 // const buttonA = <button>Histórico dos clientes</button>;
 // const buttonB = <button>Cadastrar cliente</button>; 
@@ -35,6 +38,7 @@ import React from "react";
 // };
 
 
+
 // OU ENTÃO PODEMOS FAZER COM ARROW FUNCTIONS, PRA FICAR MAIS LEGÍVEL:
 
 // const App = () => {
@@ -65,35 +69,22 @@ import React from "react";
 //     );
 // };
 
-const listCustomer = [
-    {
-        id: 1,
-        name: 'Daniela Farina',
-        skills: ['vôlei', 'ciclismo', 'yoga'],
-    },
-    {
-        id: 2,
-        name: 'Marcio Antonio',
-        skills: ['datatalker', 'dota', 'python'],
-    },
-    {
-        id: 3,
-        name: 'Tiago Faria',
-        skills: ['rpg', 'machine learning', 'minecraft'],
-    },
-    {
-        id: 4,
-        name: 'Douglas Monteiro',
-        skills: ['discussões', 'java', 'inglês'],
-    },
-]
+
+
+// LISTAS E CHAVES
+
 
 const App = () => {
+
+    const handleClick =  (id) => {
+        console.log('delete')
+        alert(`ID do cliente: ${id}`)
+    }
 
     const renderCustomers = (customer, index) => {
         return (
             <div key={`customer-${customer.id}`}>
-                <li key={`customer-${customer.id}`}>{customer.name}</li>
+                <li>{customer.name}   <Button onClick={() => handleClick(customer.id)}>Delete</Button> </li>
                 {customer.skills.map(renderSkills)}
 
             </div>
@@ -115,11 +106,71 @@ const App = () => {
             <p>Bem vindo!</p>
             <br />
             <ul>
-                {listCustomer.map(renderCustomers)}
+                {mock.map(renderCustomers)}
 
             </ul>
         </div>
     );
 };
+
+
+
+// MANIPULANDO EVENTOS PARTE 1
+
+// const showEvent = (e) => {
+//     console.log('evento clicado');
+//     console.log(e);
+// }
+// const Button = <button onClick={showEvent}>Mostrar evento</button>;   // poderia passar a função em "onClick" assim: {() => showEvent}, mas preferiu passar só a assinatura.
+
+// const App = () => {
+
+//     const handleChange = (e) => {
+//         const { value } = e.target;
+//         console.log(value);
+//     }
+
+//     return (
+//         <div>
+//             <p>DIO</p>
+//             <p>Bem-vindo</p>
+//             <input onChange={handleChange} />
+//             {Button}
+//         </div>
+//     )
+// }
+
+
+// MANIPULANDO EVENTOS PARTE 2
+
+// const App = () => {
+
+//     const name = 'DIO';
+
+//     const handleChange = (e) => {
+//         const { value } = e.target;
+//         console.log(value);
+//     }
+
+//     const showEvent = (e) => {
+//         console.log('evento clicado');
+//         console.log(e);
+//         alert(name);
+//     }
+    
+//     const Button = <button onClick={showEvent}>Mostrar evento</button>;
+
+//     return (
+//         <div>
+//             <p>DIO</p>
+//             <p>Bem-vindo</p>
+//             <input onChange={handleChange} />
+//             {Button}
+//         </div>
+//     )
+// }
+
+
+
 
 export default App;
