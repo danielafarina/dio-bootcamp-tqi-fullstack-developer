@@ -25,3 +25,5 @@ E com o JSX você passa uma função como manipulador de eventos ao invés de um
 - Adicione o fluxo de dados inverso;
 
 - Deixe sempre o projeto modular.
+
+- Dentro de src: components, containers, index.html
